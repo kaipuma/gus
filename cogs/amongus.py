@@ -77,7 +77,7 @@ class AmongUs(cmds.Cog):
 		msg = reaction.message
 		await msg.remove_reaction(reaction.emoji, user)
 		value = next(k for k, v in self.emojis.items() if v == reaction.emoji)
-		self._availabilities[user.id] = datetime.now() + timedelta(hours=value, seconds=59)
+		self._availabilities[user.id] = datetime.now() + timedelta(hours=value, seconds=value and 15)
 		await msg.edit(embed=self._create_embed())
 
 		# if there's already an active alert, don't send another
