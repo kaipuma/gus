@@ -5,7 +5,7 @@ from discord.ext import commands as cmds
 from cogs.amongus import AmongUs
 
 gus = cmds.Bot(command_prefix = "!")
-puck.add_cog(AmongUs())
+gus.add_cog(AmongUs(gus))
 gus.help_command.cog = gus.cogs["AmongUs"]
 
 @gus.command(aliases=["stop", "exit"], hidden=True)
