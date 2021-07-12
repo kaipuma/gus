@@ -1,2 +1,3 @@
 venv/
 configs/token.txt
+__pycache__
