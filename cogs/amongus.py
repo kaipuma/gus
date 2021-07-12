@@ -29,7 +29,8 @@ class AmongUs(cmds.Cog):
 		now = datetime.now()
 		timers = dict()
 		for uid, time in self._availabilities.items():
-			if (diff := time - now).days >= 0:
+			diff = time - now
+			if diff.days >= 0:
 				timers[uid] = diff
 		return timers
 
